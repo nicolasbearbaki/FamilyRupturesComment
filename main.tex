@@ -1,0 +1,121 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[english]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[scaled=.90]{helvet} % /usepackage{times} is obsolete. These options provide a better implementation of exact same fonts.
+	\usepackage{mathptmx,courier}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage[numbers]{natbib} % Low-priority: add clickable references to PDF using HyperRef and NatBib.
+\usepackage{setspace}
+\onehalfspacing
+
+% \newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+% \def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+	% Someone must have added the above definition, for stochastic indepdencence, with a technical appendix in mind.
+    % Are you still planning on completing it?
+
+\begin{document}
+\title{A Comment on ``Family Ruptures, Stress, and the Mental Health of the Next Generation''} 
+	% article titles go in quotation marks; journal titles are italicized
+\author{
+	Nicolas Bearbaki\footnote{
+    	This note sythesizes the critiques of several anonymous economists. Email: \href{mailto:nicolas.bearbaki@gmail.com}{nicolas.bearbaki@gmail.com}.}
+        }
+% Do not change author/contact info! Any confusion has been resolved in the thread.
+        
+\maketitle
+\begin{abstract}
+\noindent Persson and Rossin-Slater (2016b) claim to provide the first causal estimates of the effects of fetal stress exposure on mental health later in life. They emphasize that their analysis is the first to address non-random exposure to a relative's death  and the endogeneity of gestation length to fetal stress. In light of discoveries regarding prior literature, we find these claims to be exaggerated and misleading.
+
+%Aiming for more of a proof in the abstract (though this is a bit long):
+%Persson and Rossin-Slater (2016b) claim to provide the first causal estimates of the effects of fetal stress exposure on mental health later in life. This claim is based on the assessment that: (i) only one study from the existing medical literature uses a research design that fully addresses omitted variable bias,  by comparing mental health outcomes of those who lost a relative while \emph{in utero} to the mental health outcomes of those who lost a relative in their first year of life; and (ii) that the study in question is subject to endogeneity concerns because it does not address the possibility that gestation length could  be affected by fetal stress exposure. The authors claim that point (ii) necessitates an instrumental variables strategy (though doesn't...). Hence, at least one study from the medical literature estimates causal effects, in contrast to the claims made.
+\end{abstract}
+\section{Introduction} 
+
+Have Persson and Rossin-Slater (2016b) discovered a novel causal effect of \emph{in utero} maternal stress from family ruptures on the later life and health outcomes of children? The authors claim two substantive contributions relative to prior literature on the same topic: The authors' first claim of innovation is that they use mothers who experienced a post-natal death as a control group to compare with the treatment group of mothers who experienced a relative's death with a baby \emph{in utero}. The second claimed novel contribution is that the authors instrument for actual gestation length with predicted gestation length. Persson and Rossin-Slater (2016b) claim that these two innovations enable them to recover---for the first time---the causal effect of family ruptures on later life outcomes.  In this note, we demonstrate that both claims of novelty are false. Further, the paper's acceptance by the \emph{American Economic Review} (\emph{AER}), even after the earlier literature was brought to light, was potentially enabled by an editor who is Rossin-Slater's co-author on another work in progress.
+
+Persson and Rossin-Slater (2016b) are \emph{not} the first to use exposure to maternal bereavement \emph{in utero} for identification nor are they the first to establish a causal link between fetal stress exposure and mental health.\footnote{In May 2016, after their paper (Persson and Rossin-Slater, 2016a) was accepted at the \emph{AER}, Persson and Rossin-Slater added two footnotes: footnote 7 and footnote 10. These footnotes purport to address additional literature not cited in the April 2016 draft of Persson and Rossin-Slater (2016a) which was the version that was accepted for publication. For further information, see \href{http://retractionwatch.com/2016/05/26/economists-go-wild-over-overlooked-citations-in-preprint-on-prenatal-stress/}{retractionwatch.com/2016/05/26/economists-go-wild-over-overlooked-citations-in-preprint-on-prenatal-stress/}. Despite these additions, Persson and Rossin-Slater (2016b) do not appear to have been subjected to a further round of refereeing as might have been expected following the revelation of several closely related contributions.} In fact, a large literature, starting with Huttunen and Niskanen (1978), uses the same control group as Persson and Rossin-Slater (2016b) to identify the effect of fetal stress exposure on mental health.\footnote{It is important to realize that the public health literature on the topic has been growing steadily since the late 1970s. Class et al. (2011), who use the same dataset as Persson and Rossin-Slater (2016b) to address similar questions, review that literature.} Much of the literature invokes the same argument as Persson and Rossin-Slater (2016a, 2016b), by letting the effect of a relative's death vary with the timing of that death. For example, Abel et al. (2014) estimate models which allow the effect of bereavement to vary in categories ranging from preconception to well into childhood.\footnote{Abel et al.~(2014) also stratify by cause of relative's death, which is another of Persson and Rossin-Slater's (2016b) minor claims of innovation.} Using the reasoning in Persson and Rossin-Slater's (2016b) paper, we must conclude that these earlier papers had also recovered causal effects (whether or not that is explicitly claimed by the earlier authors in the same language used by economists).
+
+Persson and Rossin-Slater's (2016b) second claim to innovation is an instrument that turns out to be irrelevant to their estimates, as expressed in more detail by Matsumoto (2016) and summarized in Section~\ref{sec:endogeneity}.
+
+%^^^The note is short enough that previews are not necessary
+
+
+\section{Econometric Specification }
+
+Persson and Rossin-Slater's (2016b) empirical strategy is not novel, despite the authors' and their editor's claims.  Huttunen and Niskanen (1978) used the same control and treatment groups and also compared \emph{in utero} exposure to post-natal exposure. The only major difference in empirical strategy  is Persson and Rossin-Slater's (2016b) instrumental variable (IV) method---described in detail in Section~\ref{sec:endogeneity}---which does not affect the estimates.
+
+Another earlier work, Abel et al. (2014), offers estimates that are not explicitly placed in the treatment-control framework, but from which we can read off a variety of causal effects. For example, Abel et al.'s (2014) Table 3 reports that any pre-natal exposure has an odds ratio of 1.29 for psychosis, relative to no-exposure, and 1.45 for post-natal exposure. The difference in odds ratios, or some transformation thereof, is an estimate of the same causal effects as in Persson and Rossin-Slater (2016b).
+
+Although Persson and Rossin-Slater (2016b) claim to have done the first ``causal" analysis, in fact Abel et al.~(2014) and other papers in the medical literature permit far more detailed ``causal" analyses than Persson and Rossin-Slater (2016b), because the latter restrict their analysis to binary treatments. There are sound biological reasons for the effect to vary with the timing of the relative's death even \emph{in utero} (as described in Class et al. (2014), which allows the effect to vary by month of pregnancy).
+
+More formally, let $d_1$ indicate a relative's death \emph{in utero} and $d_2$ denote a relative's death within 280 days after conception. Persson and Rossin-Slater (2016b) note correctly that a regression of some mental health outcome $y$ on $d_1$ and observable controls does not recover a consistent estimate of the effect of exposure to a relative's death during pregnancy. Persson and Rossin-Slater (2016b)  leave the impression that the putatively ``correlational'' medical literature limits attention to this specification, but that is incorrect.
+
+Persson and Rossin-Slater (2016b) proceed by  estimating Ordinary Least Squares (OLS) models of the form
+  \[
+    y=\beta_0+\beta_1d_1+X'\delta+u
+  \]
+in the subpopulation for which either $d_1$ or $d_2$ has occurred. They argue that, ``intuitively, our empirical strategy exploits a discontinuity around the threshold of 280 days after conception, and assigns a child to intrauterine stress exposure if the relative’s death occurred before this date.''
+
+Persson and Rossin-Slater (2016b) are mistaken. This is not a standard regression discontinuity design. An estimate of $\beta_1$ from the specification above should asymptotically lead to the same estimate of $\theta_1-\theta_2$ from the specification
+  \[
+  	y=\theta_0+\theta_1 d_1+ \theta_2 d_2+X'\gamma+e
+  \]
+estimated over the entire population. Both models rely on regression adjustment for $X$ and a difference in means across the pre- and post-partum outcomes in order to identify the effect of exposure \emph{in utero}. The argument is essentially that $\theta_1$ and $\theta_2$ are biased but by the same magnitude, so the difference $\theta_1-\theta_2$ is an unbiased estimate of the effect of a relative's death \emph{in utero} relative to post-partum.
+
+Note that the odd ratios in Abel et al. (2014), suitably transformed, can also serve as an estimate of both $\beta_1$ and $\theta_1-\theta_2$. In essence, Huttunen and Niskanen (1978) and Abel et al. (2014) both use the same approach to identify the ``causal" effect as Persson and Rossin-Slater (2016b). Thus Persson and Rossin-Slater's (2016b) first claim to novelty is unwarranted.
+
+\section{Endogeneity in the Medical Literature}
+\label{sec:endogeneity}
+
+Can Persson and Rossin-Slater (2016b) claim an original contribution to the literature based on their introduction of an instrumental variable? In this section, we highlight concerns regarding the IV method used in Persson and Rossin-Slater (2016b).\footnote{Matsumoto (2016) discusses these issues in greater depth.} In order to make a claim to an original contribution to the literature, Persson and Rossin-Slater (2016b) argue that date of birth is endogenous, and that consequently the prior research results in the medical literature (for example, Huttunen and Niskanen (1978) and Class et al.~(2011)) are not ``causal." To address the supposed endogeneity problem,  Persson and Rossin-Slater (2016b)  instrument date of birth with the expected delivery date.
+
+Persson and Rossin-Slater (2016b) present in their Appendix D the estimation results of  a two-stage least squares regression (Table D1). They report a first stage $R^2$ of 0.97, and they mention that ``the instrument (relative death before expected birth date) is different from the actual exposure variable (relative death before actual birth date) for only about 1 percent of the individuals in our data'' (p. D-25).
+
+What this suggests is that the endogeneity they are supposedly correcting for is not an important issue. Because of the high degree of similarity between the potentially endogenous variable and the instrument, they should get almost the same result from the naive comparison using actual birth date, just as Huttunen and Niskanen (1978) did.  While Persson and Rossin-Slater (2016b) dismiss these previous scholars' findings as merely ``correlational,'' they  fail to demonstrate that their own estimates are different from those earlier findings.
+
+In fact, the opposite is likely to be true:  Persson and Rossin-Slater's (2016b) instrumental variable is the same as their ``endogenous'' variable for 99\% of their data. In other words, using the same assumptions that make their instrumental variable design valid, the simple OLS estimate is unlikely to be biased.
+
+Persson and Rossin-Slater's (2016b) IV method offers no improvement over the approach used in the medical literature.\footnote{In addition, it is unclear whether Persson and Rossin-Slater's (2016b) instrument is truly exogenous. The expected delivery date is calculated based on the gestational age of the baby at birth (conception date equals birth date minus gestational age, while expected delivery date equals conception date plus 280 days). However, the gestational age is itself an estimate based on the last menstrual cycle or measurements taken from a prenatal ultrasound. The prenatal ultrasound is the preferred method for estimating gestational age and is used if it gives a significantly different answer from the estimate using the last menstrual cycle. If pregnant individuals happen to miss early    prenatal appointments because say a close relative dies, then the estimate of gestational age is affected and the estimated date of birth is not exogenous.} Thus Persson and Rossin-Slater's (2016b) second claim to an original contribution to the literature is also unwarranted. 
+
+\section{Discussion}
+Persson and Rossin-Slater's (2016b) paper incorrectly dismisses the previous literature and misrepresents their own paper's claims to novelty. We recognize that scholars  may occasionally fail to locate and cite previous literature. However, the case of Persson and Rossin-Slater (2016b) is very concerning: even after they were made aware of their oversight of earlier literature, they have still  refused to honestly situate their work in the context of the larger literature. Instead, they incorrectly demean the work of previous scholars as merely ``correlational,'' and falsely attribute novelty to their own work that it does not deserve.
+
+%Of course, we do not know whether the collaboration started before or after the the paper's acceptance, but it is reasonable to see how the community may feel that the spirit of the rule may have been violated.
+
+% this is a weak paragraph, probably better without it -- Scientific publication has a hallowed status. At times, we think that is deserved, but at times it seems to be just another old boys' network. When the publishing process starts to look like that, we have to start thinking about new models for how to review and publish academic work.  A reader from outside economics must wonder why this incident raised such a reaction among a large group of economists. Similarly, one may be surprised that this note is anonymous, and that the only economists who openly spoke up in this debate were the authors and two of their co-authors quoted in the Retraction Watch article. 
+
+ This point is particularly disturbing because Persson and Rossin-Slater's (2016b) claims to novelty are publicly supported by Hilary Hoynes, the co-editor at the  \emph{AER} in charge of the paper. Even more concerning is that Hoynes is a recent co-author with Maya Rossin-Slater.\footnote{See \href{http://retractionwatch.com/2016/05/26/economists-go-wild-over-overlooked-citations-in-preprint-on-prenatal-stress/}{retractionwatch.com/2016/05/26/economists-go-wild-over-overlooked-citations-in-preprint-on-prenatal-stress/}. In particular, as this article reports, "Hoynes confirmed to us that Persson and Rossin-Slater had contacted her to ask if it was acceptable to revise the paper to include the Class et al.\ paper, a request which she granted and described as “not unusual.” Until a manuscript has been published, she wrote, she accepts such changes."}$^{,} $\footnote{See, for instance, \href{http://sites.google.com/a/umich.edu/baileymj/research-and-publications}{sites.google.com/a/umich.edu/baileymj/research-and-publications}.} This situation violates the editorial policy of the \emph{AER}: to limit conflicts of interest, the editorial policy does not allow an editor to be in charge of their recent co-author's paper. 
+ 
+Given the hierarchical nature of economics, a single publication in the \emph{American Economic Review} is enough to build a reputation as a leading researcher.  It is no surprise that the impression that the top publications are sometimes handed out carelessly to friends and relations is disturbing to many. It is also no surprise that  few  are willing to publicly criticize those who control access to the leading journals in the discipline. 
+
+The culture of honest economic scholarship is threatened because the \emph{AER} referees were not asked to re-assess the paper's contribution despite the new information that we have brought to light in other venues. This is why we found it important to produce this note and help correctly position this paper in the literature.
+
+\section*{Appendix: A History of Events} % Can we please settle whether the appendix comes before or after the references?
+A brief timeline of the events that transpired which motivated this note is as follows:
+\begin{enumerate}
+  \item In an earlier accepted version of their \emph{AER} paper, Persson and Rossin-Slater (2016a) failed to cite the health literature relating maternal stress to health outcomes of children, and instead falsely claimed a novel contribution.
+  \item When this came to light, instead of acknowledging the existing literature, Persson and Rossin-Slater (2016b) added footnotes which significantly misrepresented the content of said literature, and once again falsely claimed a novel contribution for themselves.
+  \item The revised paper (Persson and Rossin-Slater, 2016b) was apparently not sent back for a new round of refereeing, and the changes were instead approved only at the sole discretion of the assigned co-editor who may be exposed to conflict of interest.
+  \item A group of anonymous economists worked together to produce this note to clarify our position on the matter. We do not know one another's identities. We will not reveal our identities to avoid retaliation from editors at \emph{AER} and other members of their networks.
+\end{enumerate}
+
+\pagebreak
+
+\begin{thebibliography}{abbrev}
+\bibitem{abel}Abel, K.~M., H.~P.~Heuvelman, L.~Jorgensen, C.~Magnusson, S.~Wicks, E.~Susser, J.~Hallkvist, and C.~Dalman. ``Severe bereavement stress during the prenatal and childhood periods and risk of psychosis in later life.'' \emph{BMJ: British Medical Journal} 348 (2014): f7679. doi:~10.1136/bmj.f7679.
+\bibitem{}Black, Sandra E., Paul J. Devereux, and Kjell G. Salvanes. ``Does Grief Transfer across Generations? Bereavements during Pregnancy and Child Outcomes.'' \emph{American Economic Journal: Applied Economics} 8, no. 1 (2016): 193-223.
+\bibitem{class }Class, Quetzal A., Paul Lichtenstein, Niklas Långström, and Brian M. D'Onofrio. ``Timing of prenatal maternal exposure to severe life events and adverse pregnancy outcomes: a population study of 2.6 million pregnancies.'' \emph{Psychosomatic Medicine} 73, no. 3 (2011): 234-241.
+
+\bibitem{huttunen}Huttunen, Matti O., and Pekka Niskanen. ``Prenatal loss of father and psychiatric disorders.'' \emph{Archives of General Psychiatry} 35, no. 4 (1978): 429-431.
+\bibitem{bmstrong}Matsumoto, Brett. ``Comment on the Identification Strategy in `Family Ruptures, Stress, and the Mental Health of the Next Generation.''' \emph{Working paper}, June 2016. Available at: \href{https://www.dropbox.com/s/8t7k906ze2mfkk7/comment.pdf}{dropbox.com/s/8t7k906ze2mfkk7/comment.pdf?dl=0}.
+\bibitem{PPMRS}Persson, Petra, and Maya Rossin-Slater. ``Family ruptures, stress, and the mental health of the next generation.'' Pre-print, April 2016 (2016a). \emph{Forthcoming} in the \emph{American Economic Review}. Available at: \href{https://web.archive.org/web/20160520143717/http://www.econ.ucsb.edu/~mrossin/Persson_RossinSlater_apr2016.pdf}{archive.org}.
+\bibitem{PPMRS2}Persson, Petra, and Maya Rossin-Slater. ``Family ruptures, stress, and the mental health of the next generation.'' NBER Working Paper No.~22229, May 2016 (2016b). \emph{Forthcoming} in the \emph{American Economic Review}.
+%\bibitem{fourcade} Fourcade, Marion, Etienne Ollion, and Yann Algan. "The Superiority of Economists." The Journal of Economic Perspectives 29.1 (2015): 89-113.
+\end{thebibliography}
+
+
+
+
+\end{document}.
